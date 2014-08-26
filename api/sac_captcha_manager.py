@@ -2,12 +2,14 @@ import time
 from database.sac_database import SACDatabase
 from captchas.sac_recaptcha import SACReCaptcha
 from captchas.sac_textcaptcha import SACTextCaptcha
+from captchas.sac_asirra import SACAsirra
 
 class CaptchaManager(object):
 	
 	captchas = {
 		'SACReCaptcha' : SACReCaptcha,
-		'SACTextCaptcha' : SACTextCaptcha
+		'SACTextCaptcha' : SACTextCaptcha,
+		'SACAsirra' : SACAsirra
 		}
 
 	def __init__(self):

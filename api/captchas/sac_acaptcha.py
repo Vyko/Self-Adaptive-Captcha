@@ -6,6 +6,7 @@ class ACaptcha(object):
 		self.is_valid = False
 		self.num = ''
 		self.html = ''
+		self.form_attr = ''
 
 	def submit(self, params):
 		  raise NotImplementedError("Submit method not implemented")

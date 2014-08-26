@@ -21,7 +21,7 @@ class Controller(object):
 		captchaType = self.selectCaptchaTypeBestUtil(utilities)
 		self.cm.instanceCurrentCaptcha(captchaType)
 		self.cm.generateCaptcha()
-		return {'type' : self.cm.currentCaptcha.sac_type, 'html' : self.cm.currentCaptcha.html}
+		return {'type' : self.cm.currentCaptcha.sac_type, 'html' : self.cm.currentCaptcha.html, 'form_attr':self.cm.currentCaptcha.form_attr}
 
 	def selectCaptchaTypeBestUtil(self, utilities):
 		best = None
@@ -40,4 +40,4 @@ class Controller(object):
 		if (self.cm.currentCaptcha.is_valid == False):
 			self.cm.instanceCurrentCaptcha(self.cm.currentCaptcha.sac_type)
 			self.cm.generateCaptcha()
-		return {'success':self.cm.currentCaptcha.is_valid, 'html':self.cm.currentCaptcha.html}
+		return {'success':self.cm.currentCaptcha.is_valid, 'html':self.cm.currentCaptcha.html, 'form_attr':self.cm.currentCaptcha.form_attr}

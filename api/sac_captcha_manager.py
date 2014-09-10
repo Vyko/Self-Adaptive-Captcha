@@ -27,6 +27,7 @@ class CaptchaManager(object):
 	def generateCaptcha(self):
 		self.currentCaptcha.generate()
 		self.db.saveCaptcha(self.currentCaptcha)
+		return self.currentCaptcha
 
 	def setCaptchaByNum(self, captchaNum):
 		rows = self.db.getCaptchaRowsByNum(captchaNum)

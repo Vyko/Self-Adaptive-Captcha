@@ -21,7 +21,6 @@ class TextCaptchaXMLHandler(xml.sax.handler.ContentHandler):
 
 class SACTextCaptcha(ACaptcha):
 
-    utils = {'security':7,'accessibility':7, 'mobile':7, 'ease':5}
     sac_type = 'SACTextCaptcha'
 
     def __init__(self):

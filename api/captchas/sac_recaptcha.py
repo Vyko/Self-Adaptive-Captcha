@@ -1,8 +1,7 @@
 from sac_acaptcha import ACaptcha
-from lib.recaptcha.client import captcha
+from third_lib.recaptcha.client import captcha
 
 class SACReCaptcha(ACaptcha):
-	utils = {'security':10,'accessibility':3, 'mobile':5, 'ease':3}
 	sac_type = 'SACReCaptcha'
 
 	def __init__(self):

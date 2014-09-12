@@ -32,10 +32,10 @@ class SACTextCaptcha(ACaptcha):
                 
     def fetchCaptcha(self):
         """This method instantiate an XMLParser to retrieve the question its list of answers"""
-         parser = xml.sax.make_parser()
-         handler = TextCaptchaXMLHandler(self)
-         parser.setContentHandler(handler)
-         parser.parse('http://api.textcaptcha.com/'+self.privateKey)
+        parser = xml.sax.make_parser()
+        handler = TextCaptchaXMLHandler(self)
+        parser.setContentHandler(handler)
+        parser.parse('http://api.textcaptcha.com/'+self.privateKey)
 
     def generate(self):
         self.is_valid = False

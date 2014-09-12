@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><?php echo $media ?> website</title>
+	</head>
+	<body>
+		<h1>Welcome to my <?php echo $media ?> website</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat neque ut lorem pretium pharetra at quis nisi. Nam suscipit, lacus gravida pellentesque sodales, turpis nulla aliquet nisl, quis pharetra odio orci a elit. 
+		 	Nunc sed venenatis quam. Maecenas scelerisque est non diam aliquam egestas. Cras vitae sapien semper, dignissim quam a, mollis lacus. 
+		 	Nulla at facilisis arcu. Nam egestas quam purus, molestie gravida ligula pretium vel. Maecenas nec metus condimentum, ullamcorper turpis non, cursus odio.
+		 </p>
+		 <form action="/" method="POST" <?php echo $captcha->form_attr?>>
+		       <table>
+				<tr>
+					<td><label for="firstname">First name:</label></td>
+					<td><input id="firstname" name="firstname" value="" placeholder="Enter your first name" /></td>
+				</tr>
+				<tr>
+					<td><label for="lastname">Last name:</label></td>
+					<td><input id="lastname" name="lastname" value="" placeholder="Enter your last name" /></td>
+				</tr>
+				<tr>
+					<td colspan=2>
+					    <?php echo $captcha->html ?>
+					</td>
+				</tr>
+		       </table>
+		       <input type="submit" name="submitform" value="Submit">
+		 </form>
+
+<p>
+<h4>Try with another type of content ?</h4>
+A <a href="/?media=blog">blog</a>, a <a href="/?media=bank">bank</a> website, an <a href="/?media=email">email</a> account website or a <a href="/?media=chat">chat</a> website.
+</p>
+</body>
+</html>

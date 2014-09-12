@@ -15,7 +15,7 @@ class Utility(object):
             }
 
     def getBestUtility(self, envManager):
-        mediaUtils = self.mediasUtils.get(envManager.media, 'blog')
+        mediaUtils = self.mediasUtils.get(envManager.media, self.mediasUtils.get('blog'))
         bestUtil = None
         
         for (captchaType, captchaUtil) in self.captchasUtils.items():

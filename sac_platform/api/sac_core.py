@@ -17,7 +17,7 @@ class Core(object):
 		captchaType = self.getBestUtility()
 		captcha = self.getCaptcha(captchaType)
 
-		return {'type' : captcha.sac_type, 'html' : captcha.html, \
+		return {'html' : captcha.html, \
 			'form_attr':captcha.form_attr}
 
 	def collectEnvironment(self, form):

@@ -26,13 +26,7 @@ class SAC {
 	   throw new Exception("Self Adaptive CAPTCHAs platform is not running.");
 
 	$ret = json_decode($ret);
-
-	$ref = new ReflectionClass($ret->type);
-      	$captcha = $ref->newInstance($this->baseurl);
-
-	$captcha->html = $ret->html;
-	$captcha->form_attr = $ret->form_attr;
-	return $captcha;
+	return $ret;
       }
 
       public function submitCaptcha($post)

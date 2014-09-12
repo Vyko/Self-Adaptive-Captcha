@@ -2,6 +2,7 @@ import os
 import sqlite3 as sqlite
 
 class SACDatabase(object):
+	"""This class abstracts SQLite3 to easily save and retrieve CAPTCHAs in database"""
 	def __init__(self):
 		super(SACDatabase, self).__init__()
 		self.dbPath = os.getcwd()+'/api/database/sac.db'

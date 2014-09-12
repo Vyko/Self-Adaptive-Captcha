@@ -20,6 +20,7 @@ class TextCaptchaXMLHandler(xml.sax.handler.ContentHandler):
 
 
 class SACTextCaptcha(ACaptcha):
+    """This is the implementation of the TextCaptcha API"""
 
     sac_type = 'SACTextCaptcha'
 
@@ -30,6 +31,7 @@ class SACTextCaptcha(ACaptcha):
         self.answers = []
                 
     def fetchCaptcha(self):
+        """This method instantiate an XMLParser to retrieve the question its list of answers"""
          parser = xml.sax.make_parser()
          handler = TextCaptchaXMLHandler(self)
          parser.setContentHandler(handler)
@@ -42,6 +44,7 @@ class SACTextCaptcha(ACaptcha):
         self.html += '<input type="hidden" name="sac_num" value="'+self.num+'"/>'
 
     def submit(self, params):
+        """To verify user answers, we compare the md5sum of the clear lowercase answer to ones saved in database"""
         for answer in self.answers:
             if (answer == md5.new((params['answer'].lower().strip())).hexdigest()):
                 self.is_valid = True

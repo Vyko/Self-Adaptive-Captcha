@@ -5,7 +5,8 @@ from captchas.sac_textcaptcha import SACTextCaptcha
 from captchas.sac_asirra import SACAsirra
 
 class CaptchaManager(object):
-	
+	"""This class manages all the implemented CAPCTHAs by following the factory pattern and can instanciates new CAPTCHAs using reflection. Each time a CAPTCHA is generated, the instance is saved in database in order to be able to retrieve it when the platform will check it"""
+
 	captchas = {
 		'SACReCaptcha' : SACReCaptcha,
 		'SACTextCaptcha' : SACTextCaptcha,

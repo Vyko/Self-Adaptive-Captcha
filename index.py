@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 
-"""This is the file that manages the url request and instantiate the Core object to generate, identify or submit a CAPTCHA"""
+"""This is the file that manages the url request with Flask Framework, it instantiates the Core object to generate, identify or submit a CAPTCHA"""
 
 ## API
 @app.route('/api/generate', methods = ['POST'])

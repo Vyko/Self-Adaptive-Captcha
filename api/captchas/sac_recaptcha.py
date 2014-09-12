@@ -2,6 +2,7 @@ from sac_acaptcha import ACaptcha
 from third_lib.recaptcha.client import captcha
 
 class SACReCaptcha(ACaptcha):
+	"""This the implementation of ReCaptcha API, as they provide a third library we implement it by following the displayhtml and the submit methods"""
 	sac_type = 'SACReCaptcha'
 
 	def __init__(self):
